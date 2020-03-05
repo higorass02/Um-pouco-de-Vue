@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Aula 01</title>
+</head>
+<body>
+    <div id="app">
+        <div v-if="status">
+            <h1>{{ titulo }}</h1>
+        </div>
+        <div v-if="usuario.id >= 0">
+            id: {{ usuario.id }}<br>
+            nome: {{ usuario.nome }}<br>
+            idade: {{ usuario.idade }}
+        </div>
+        <div v-else="usuario.id <= 0">
+            Nao possiem usuarios para listar
+        </div>
+    </div>
+    <!-- development version, includes helpful console warnings -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data:{
+                txt: true,
+                status: true,
+                titulo: 'ta aki o mlk',
+                usuario:{
+                    id: 1,
+                    idade: 10,
+                    nome: 'jao'
+                }    
+            }
+            
+            
+        });
+        
+    </script>
+</body>
+</html>

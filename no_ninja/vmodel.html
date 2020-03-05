@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="">
+	
+</head>
+<body>
+	<div id="app">
+		<h1>{{ titulo }}</h1>
+		<div>
+			<form action="" method="" id="fomulario">
+				<div class="form-group">
+					<label for="txt_nome">Nome:</label>
+					<input v-model='nome' type="text" name="txt_nome" id="txt_nome">
+				</div>
+				<div class="form-group">
+					<label for="txt_email">Email:</label>
+					<input v-model='email' type="email" name="txt_email" id="txt_email">
+				</div>
+				<div class="form-group">
+					<label for="txt_tell">Telefone:</label>
+					<input v-model='tell' type="text" name="txt_tell" id="txt_tell">
+				</div>
+			</form>
+		</div>
+		<br>
+		<div style="border: 2px solic black;">
+			Dados de Cadastro
+			<br>
+			Nome : {{ nome }}
+			<br>
+			E-Mail : {{ email }}
+			<br>
+			Telefone : {{ tell }}
+		</div>
+	</div>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<script type="text/javascript">
+		var app = new Vue({
+			el:'#app',
+			data : {
+				titulo:'Meu titulo BIXAO',
+				nome:'',
+				email:'',
+				tell:'',
+			}
+		});
+	</script>
+</body>
+</html>
